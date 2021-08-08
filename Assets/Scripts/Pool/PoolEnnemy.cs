@@ -1,4 +1,5 @@
 ﻿using Gameplay.Ennemies;
+using PoolSystem.Runtime;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class PoolEnnemy : MonoBehaviour
     {
         for(int i = 0; i < _ennemies.Count; i++)
         {
-            PoolSystem.instance.QueueIntoPool<Ennemy>(_ennemies[i], _numberToSpawn);
+            PoolManager.instance.QueueIntoPool<Ennemy>(_ennemies[i], _numberToSpawn);
         }
     }
 }

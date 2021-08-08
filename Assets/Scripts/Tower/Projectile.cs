@@ -1,5 +1,6 @@
 ﻿using Gameplay.Ennemies;
 using UnityEngine;
+using PoolSystem.Runtime;
 
 public abstract class Projectile : MonoBehaviour
 {
@@ -12,11 +13,11 @@ public abstract class Projectile : MonoBehaviour
     [SerializeField]
     private float _speed = 5f;
 
-    protected PoolSystem _poolArrow;
+    protected PoolManager _poolArrow;
 
     private void Start()
     {
-        _poolArrow = PoolSystem.instance;
+        _poolArrow = PoolManager.instance;
     }
 
     private void Update()

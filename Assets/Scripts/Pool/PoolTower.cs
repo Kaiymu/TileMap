@@ -1,5 +1,5 @@
 ﻿using Gameplay.Tower;
-using System.Collections;
+using PoolSystem.Runtime;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,7 +15,7 @@ public class PoolTower : MonoBehaviour
     private void Awake()
     {
         for (int i = 0; i < _basicTowers.Count; i++) {
-            PoolSystem.instance.QueueIntoPool<BasicTower>(_basicTowers[i], _numberToSpawn);
+            PoolManager.instance.QueueIntoPool<BasicTower>(_basicTowers[i], _numberToSpawn);
         }
     }
 }

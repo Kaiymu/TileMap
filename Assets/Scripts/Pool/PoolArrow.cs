@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using PoolSystem.Runtime;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +13,7 @@ public class PoolArrow : MonoBehaviour
     {
         for (int i = 0; i < _arrows.Count; i++)
         {
-            PoolSystem.instance.QueueIntoPool<Projectile>(_arrows[i], _numberToSpawn);
+            PoolManager.instance.QueueIntoPool<Projectile>(_arrows[i], _numberToSpawn);
         }
     }
 }

@@ -1,5 +1,5 @@
-﻿using System.Collections;
-using Gameplay.Ennemies;
+﻿using Gameplay.Ennemies;
+using PoolSystem.Runtime;
 using UnityEngine;
 
 namespace Gameplay.Tower
@@ -13,7 +13,7 @@ namespace Gameplay.Tower
         [SerializeField]
         protected float _shootingSpeed = 1f;
 
-        protected PoolSystem _poolArrow;
+        protected PoolManager _poolArrow;
 
         protected Animator _animator;
 
@@ -31,7 +31,7 @@ namespace Gameplay.Tower
 
         private void Start()
         {
-            _poolArrow = PoolSystem.instance;
+            _poolArrow = PoolManager.instance;
         }
 
         private void Update()

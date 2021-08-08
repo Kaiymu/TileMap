@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.kaiymu.poolsystem": {
+      "version": "https://github.com/Kaiymu/UnityPoolSystem.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "4b48d12f53d45c030cc1cb0572b1cfa6d6c0e504"
+    },
     "com.unity.2d.animation": {
       "version": "3.2.6",
       "depth": 0,

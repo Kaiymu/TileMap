@@ -1,5 +1,5 @@
 ﻿using Gameplay.Ennemies;
-using System.Collections;
+using PoolSystem.Runtime;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour
     private Stack<EnnemiesWave> _stackWave = new Stack<EnnemiesWave>();
     private Stack<Ennemy> _stackEnnemies = new Stack<Ennemy>();
 
-    private PoolSystem _poolEnnemy;
+    private PoolManager _poolEnnemy;
 
     private EnnemiesWave _currentWave;
     private float _timeOffset = 0;
@@ -31,7 +31,7 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        _poolEnnemy = PoolSystem.instance;
+        _poolEnnemy = PoolManager.instance;
     }
 
     public void SpawnNewWave()

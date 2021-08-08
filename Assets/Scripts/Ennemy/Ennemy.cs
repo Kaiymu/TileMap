@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using PoolSystem.Runtime;
+using UnityEngine;
 
 namespace Gameplay.Ennemies
 {
@@ -21,7 +22,7 @@ namespace Gameplay.Ennemies
         [SerializeField]
         protected HealthBar _healthBar;
 
-        protected PoolSystem _poolEnnemy;
+        protected PoolManager _poolEnnemy;
         protected Animator _ennemyAnimator;
 
         private SpriteRenderer _spriteRenderer;
@@ -35,7 +36,7 @@ namespace Gameplay.Ennemies
 
         private void Start()
         {
-            _poolEnnemy = PoolSystem.instance;
+            _poolEnnemy = PoolManager.instance;
         }
 
         private void OnEnable()
